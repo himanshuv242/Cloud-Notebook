@@ -1,8 +1,9 @@
 import React from 'react'
 
 function About() {
+  
   return (
-    <div>this about</div>
+    <div>this about and he is in class </div>
   )
 }
 
