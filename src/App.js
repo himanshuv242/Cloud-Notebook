@@ -10,6 +10,7 @@ import Signup from "./components/Signup";
 import { useState } from "react";
 
 function App() {
+
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
@@ -24,8 +25,8 @@ function App() {
   return (
     <>
       <NoteState>
-        <Navbar />
-        <Alert alert={alert} />
+        <Navbar showAlert={showAlert} />
+        <Alert alert={alert} style={{ top: "50px" }} />
         <div className="container">
           <Routes>
             <Route exact path="/" element={<Home showAlert={showAlert} />} />
