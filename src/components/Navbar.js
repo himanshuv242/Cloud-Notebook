@@ -6,7 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   let location = useLocation();
   useEffect(() => {
-    console.log(location.pathname);
   }, [location]);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -39,15 +38,8 @@ function Navbar() {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <Link className="btn btn-primary mx-1" to="/login" role="button">Login</Link>
+            <Link className="btn btn-primary mx-1" to="/signup" role="button">Signup</Link>
           </form>
         </div>
       </div>
